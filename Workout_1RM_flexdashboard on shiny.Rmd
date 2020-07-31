@@ -1,0 +1,55 @@
+---
+title: "Workout 1RM tracker"
+output: 
+  flexdashboard::flex_dashboard:
+    navbar:
+      - { title: "Ajeet",  align: right }
+    
+runtime: shiny
+---
+
+```{r global, include=FALSE}
+library(flexdashboard)
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(googlesheets4)
+library(shinyWidgets)
+library(plotly)
+
+# Make googlesheets4 not try to authenticate, since we're using a public sheet
+sheets_deauth()
+
+# import google sheet with the data
+
+data<- reactive({read_sheet("https://docs.google.com/spreadsheets/d/14XrdHrBo2-kyVifOKj9pBRTaerRQM7s25CHB4wCrDag/edit?usp=drivesdk")
+})
+
+
+
+
+ 
+
+
+
+
+```
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+
+
+```{r}
+
+```
+
+Column 
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
